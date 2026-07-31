@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #2A2B3D;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.page {
+    display: none;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.page.active {
+    display: block;
+}
+
+
+.logo {
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    color: white;
+    text-shadow:
+        0 0 10px #fff,
+        0 0 30px #3E3F57,
+        0 0 60px #3E3F57;
+    margin-bottom: 80px;
+}
+
+
+.small-logo {
+    font-size: 40px;
+    margin: 20px;
+}
+
+
+button {
+    background: #3E3F57;
+    color: white;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .25s;
+    margin: 10px;
+    box-shadow: 0 0 15px #0005;
+}
+
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #ffffff55;
+}
+
+
+.small-btn {
+    font-size: 16px;
+    padding: 12px 35px;
+}
+
+
+.box {
+    background: #3E3F57;
+    padding: 30px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 0 30px #0008;
+}
+
+
+input {
+    width: 90%;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: #2A2B3D;
+    color: white;
+    font-size: 16px;
+}
+
+
+.back {
+    background: #555;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logout {
+    background: #b83232;
+}
+
+
+.profile {
+    max-width: 700px;
+}
+
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.tab {
+    max-width: 600px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.robux-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    font-size: 50px;
+}
+
+
+#notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #c03939;
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: none;
+    z-index: 999;
+}
+
+
+.charge-btn {
+    width: 200px;
+}
