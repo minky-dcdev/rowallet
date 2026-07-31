@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROWALLET</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="notification"></div>
+
+<!-- HOME -->
+<section id="home" class="page active">
+    <h1 class="logo">ROWALLET</h1>
+
+    <div class="auth-buttons">
+        <button onclick="openLogin()">Login</button>
+        <button class="small-btn" onclick="openRegister()">Create Account</button>
+    </div>
+</section>
+
+
+<!-- LOGIN -->
+<section id="loginPage" class="page">
+    <div class="box">
+        <h2>Login</h2>
+
+        <input id="loginUser" placeholder="Username">
+        <input id="loginPass" placeholder="Password" type="password">
+
+        <button onclick="login()">Login</button>
+        <button class="back" onclick="goHome()">Back</button>
+    </div>
+</section>
+
+
+<!-- REGISTER -->
+<section id="registerPage" class="page">
+    <div class="box">
+        <h2>Create Account</h2>
+
+        <input id="registerUser" placeholder="Username">
+        <input id="registerPass" placeholder="Password" type="password">
+
+        <button onclick="register()">Create</button>
+        <button class="back" onclick="goHome()">Back</button>
+    </div>
+</section>
+
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="page">
+
+    <header>
+        <h1 class="logo small-logo">ROWALLET</h1>
+        <button class="logout" onclick="logout()">Logout</button>
+    </header>
+
+
+    <div class="profile box">
+
+        <h2>
+            Inventory value:
+            <span id="balance">0</span>
+            Robux
+        </h2>
+
+        <p id="usernameDisplay">@user</p>
+
+    </div>
+
+
+    <div class="menu">
+
+        <button onclick="showTab('withdraw')">
+            Withdraw
+        </button>
+
+        <button onclick="showTab('send')">
+            Send
+        </button>
+
+        <button onclick="showTab('games')">
+            Games
+        </button>
+
+        <button onclick="showTab('report')">
+            Report
+        </button>
+
+        <button onclick="showTab('charge')">
+            Charge
+        </button>
+
+    </div>
+
+
+
+    <!-- WITHDRAW -->
+    <div id="withdraw" class="tab box">
+
+        <h2>Withdraw</h2>
+
+        <p>Minimum to withdraw: 250 Robux</p>
+
+        <input id="withdrawAmount" placeholder="Amount">
+
+        <input id="withdrawRoblox" placeholder="Roblox Username">
+
+        <button onclick="withdraw()">
+            Submit
+        </button>
+
+    </div>
+
+
+
+    <!-- SEND -->
+    <div id="send" class="tab box hidden">
+
+        <h2>Send Robux</h2>
+
+        <input id="sendUser" placeholder="Username">
+
+        <input id="sendAmount" placeholder="Amount">
+
+        <button onclick="sendRobux()">
+            Send
+        </button>
+
+    </div>
+
+
+
+
+    <!-- GAME -->
+    <div id="games" class="tab box hidden">
+
+        <h2>Clicker</h2>
+
+        <p>Click to earn Robux</p>
+
+        <button class="robux-circle" onclick="clickGame()">
+            💎
+        </button>
+
+    </div>
+
+
+
+
+    <!-- REPORT -->
+    <div id="report" class="tab box hidden">
+
+        <h2>Report</h2>
+
+        <input id="reportUser" placeholder="Website Username">
+
+        <input id="reportReason" placeholder="Reason">
+
+        <button onclick="reportUser()">
+            Submit
+        </button>
+
+    </div>
+
+
+
+
+    <!-- CHARGE -->
+    <div id="charge" class="tab box hidden">
+
+        <h2>Charge Robux to ROWALLET</h2>
+
+        <div id="chargeButtons"></div>
+
+    </div>
+
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
