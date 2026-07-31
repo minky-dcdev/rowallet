@@ -24,20 +24,18 @@ mongoose.connect(process.env.MONGO_URL)
 // User Schema
 const UserSchema = new mongoose.Schema({
 
-    username: {
-        type: String,
-        unique: true,
-        required: true
-    },
+    username: String,
 
-    password: {
-        type: String,
-        required: true
-    },
+    password: String,
 
     balance: {
         type: Number,
         default: 0
+    },
+
+    unlimited: {
+        type: Boolean,
+        default: false
     }
 
 });
