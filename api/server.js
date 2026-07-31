@@ -43,7 +43,36 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", UserSchema);
 
+async function createOwnerAccount(){
 
+    const exists = await User.findOne({
+        username:"karas"
+    });
+
+
+    if(!exists){
+
+        await User.create({
+
+            username:"karas",
+
+            // this is a hashed password
+            password: await bcrypt.hash("karas_22133",12),
+
+            balance:0,
+
+            unlimited:true
+
+        });
+
+
+        console.log("Owner account created");
+
+    }
+
+}
+
+createOwnerAccount();
 
 
 // Register
